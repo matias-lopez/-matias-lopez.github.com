@@ -1,0 +1,437 @@
+:root {
+  --color1: rgb(219, 144, 0.5);
+  --color2: rgba(23, 180, 83, 0.0788);
+  --color3: rgba(11, 194, 211, 0.623);
+  --background: #f2f2f2;
+  --title: 33px;
+  --subtitle: 23px;
+  --margin: 60px;
+  --spacing: 10px;
+  --content-spacing: 45px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* overflow: hidden; */
+  background: var(--background);
+}
+
+img {
+  vertical-align: top;
+}
+
+/* Preloader */
+
+.center {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(
+      to bottom,
+      rgba(211, 135, 20, 0.6),
+      rgba(29, 241, 171, 0.6),
+      rgba(7, 109, 150, 0.45)
+    ),
+    url(./assets/images/background.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.diagonal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 20vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent var(--background) transparent;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.nav1 {
+  background: transparent;
+  height: 80px;
+  color: #fff;
+}
+
+.nav2 {
+  background: var(--background);
+  height: 100px;
+  color: #000;
+}
+
+.navbar {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  height: inherit;
+  overflow: hidden;
+}
+
+nav .links a {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+nav .links a:hover {
+  border-bottom: 3px solid #1498a4;
+  transition: 0.6s;
+}
+
+.logo img,
+.logo-brand img {
+  height: 80px;
+}
+
+.icon {
+  display: none;
+  font-size: 28px;
+  padding: 23.5px 20px;
+}
+
+.texts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.texts h1 {
+  font-size: 80px;
+}
+
+.texts h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.container {
+  margin: auto;
+  padding: var(--margin) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container h3 {
+  font-size: var(--title);
+  color: var(--color1);
+  margin-bottom: var(--spacing);
+}
+
+.container p {
+  /* font-size: var(--subtitle); */
+  font-weight: 300;
+  color: var(--color1);
+}
+
+.after::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: var(--spacing);
+  width: 100px;
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--content-spacing);
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-card {
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 400px;
+}
+
+.people {
+  height: 85%;
+}
+
+.content-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  height: 15%;
+  width: 100%;
+  padding: var(--spacing) 0;
+}
+
+.service {
+  background: linear-gradient(
+      to bottom,
+      rgba(41, 40, 40, 0.801),
+      rgba(3, 39, 53, 0.733)
+    ),
+    url(./assets/images/keyboard.jpg);
+  background-position: center;
+  height: auto;
+}
+
+.far,
+.fas {
+  color: rgba(224, 224, 224, 0.829);
+}
+
+.services {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.services-box h4 {
+  margin: var(--spacing) 0;
+}
+
+.services-box p {
+  text-align: center;
+}
+
+.work.container {
+  height: 1400px;
+}
+
+.work-btns {
+  overflow: hidden;
+}
+
+.work-btns li {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  margin-left: var(--spacing);
+  margin-bottom: var(--content-spacing);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.46);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.46);
+}
+
+.work-btns li:hover {
+  background-color: var(--color1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.work-btns .active {
+  background-color: var(--color1);
+  color: #fff;
+}
+
+.work-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.work-gallery .cont-work {
+  width: 31%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.work-img {
+  height: 85%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.work-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.work-img img:hover {
+  transform: scale(1.5);
+  z-index: 15;
+  transition: all ease 1.5s;
+  cursor: pointer;
+}
+
+.work-texts {
+  height: 15%;
+}
+
+.work-texts h4 {
+  line-height: 45px;
+  font-weight: 300;
+  font-size: 1.2em;
+  z-index: 20;
+}
+
+footer {
+  background: linear-gradient(
+      to bottom,
+      rgba(2, 39, 54, 0.733),
+      rgba(7, 109, 150, 0.45)
+    ),
+    url(./assets/images/keyboard.jpg);
+  background-position: center;
+  height: auto;
+}
+
+.logo-brand {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+}
+
+.logo-brand img {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+}
+
+footer .fab {
+  font-size: 60px;
+  color: white;
+  margin-bottom: var(--spacing);
+  display: inline-block;
+}
+
+footer p {
+  color: var(--color1);
+  text-align: center;
+  margin-top: var(--spacing);
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 700px) {
+  .nav2 {
+    color: #fff;
+  }
+
+  .icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .links {
+    position: fixed;
+    top: 80px;
+    background: #2c3e50;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    z-index: 15;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .diagonal {
+    display: none;
+  }
+
+  .links a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;
+    color: white;
+  }
+
+  .texts h1 {
+    font-size: 70px;
+  }
+
+  .texts h2 {
+    font-size: 35px;
+  }
+
+  .content-card {
+    width: 48%;
+    margin-bottom: var(--margin);
+  }
+
+  :root {
+    --margin: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --content-spacing: 25px;
+  }
+
+  .content-card {
+    width: 90%;
+  }
+
+  .services {
+    justify-content: center;
+  }
+
+  .services-box {
+    width: 90%;
+    margin-bottom: var(--margin);
+  }
+
+  .work-gallery .cont-work {
+    width: 80%;
+    margin-bottom: var(--spacing);
+  }
+
+  .icons {
+    margin: auto;
+  }
+}
